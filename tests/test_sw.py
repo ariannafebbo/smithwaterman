@@ -6,8 +6,9 @@ import string
 
 def test_smith_waterman_stress():
   letters = string.ascii_lowercase
-  result_str = ''.join(random.choice(letters) for i in range(500))
-  align1, align2, s = sw.smithwaterman(result_str, result_str, match_cost=3, mismatch_cost=-3, gap_cost=-2)
+  seq_len = 500
+  s1 = ''.join(random.choice(letters) for i in range(seq_len))
+  align1, align2, s = sw.smithwaterman(s1, s1, match_cost=3, mismatch_cost=-3, gap_cost=-2)
   assert align1 == align2
 
 def test_smith_waterman():
