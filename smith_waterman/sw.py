@@ -2,9 +2,8 @@ from .helper_functions import compute_matrix_score, traceback, path2alignment
 
 def find_alignment(seq1, seq2, match_cost=1, mismatch_cost=-1, gap_cost=-2):
   """
-  Returns the optimal local alignment for the two input sequences and the alignment score,
-  given the sequences I want to align and the cost of a match, of a mismatch
-  and of a gap.
+  Returns the optimal local alignment and the alignment score for the two input sequences,
+  given the cost of a match, a mismatch and a gap.
 
   Parameters
   ----------

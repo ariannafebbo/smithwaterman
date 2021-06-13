@@ -56,14 +56,15 @@ def compute_matrix_score(seq1, seq2, match_cost=1, mismatch_cost=-1, gap_cost=-2
 
 def traceback(score_matrix, direction_matrix):
   """
-  Returns a list of coordinates starting from the coordinates of the highest 
-  score of score matrix and the highest score of the score matrix, 
-  given the score matrix and the direction matrix.
+  Returns a list of coordinates (starting from the coordinate of the highest 
+  score) and the highest score of the score matrix. 
 
   Parameters
   ----------
   score_matrix : np.array
+    Matrix of alignment scores
   direction_matrix : np.array
+    Matrix of alignment directions
 
   Returns
   -------
@@ -90,8 +91,8 @@ def traceback(score_matrix, direction_matrix):
 
 def path2alignment(seq1, seq2, path):
   """
-  Returns two strings containing the bases alignment, given the two sequences 
-  I want to align and the list of coordinates.
+  Given two sequences and an alignment path returns the two strings aligned
+  as specified in the path.
 
   Parameters
   ----------
@@ -100,8 +101,7 @@ def path2alignment(seq1, seq2, path):
   seq2 : str
     second sequence to align 
   path : list
-    list of coordinates starting from the coordinate of the highest score
-    of the score matrix
+    List of coordinates representing the alignment path
   
   Returns
   -------
