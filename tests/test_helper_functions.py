@@ -54,7 +54,7 @@ def test_long_seq():
                                           ['N', 'N', 'U', 'D', 'U', 'U', 'D', 'L', 'L'],
                                           ['N', 'D', 'L', 'D', 'D', 'U', 'U', 'D', 'D'],
                                           ['N', 'U', 'D', 'U', 'D', 'D', 'U', 'D', 'D']])
-    result_score_matrix, result_direction_matrix = hf.matrix_score(seq1, seq2, match_cost=3, mismatch_cost=-3, gap_cost=-2)
+    result_score_matrix, result_direction_matrix = hf.compute_matrix_score(seq1, seq2, match_cost=3, mismatch_cost=-3, gap_cost=-2)
     assert (result_score_matrix == expected_score_matrix).all(), "Score matrix is not correct"
     assert (result_direction_matrix == expected_direction_matrix).all(), "Direction matrix is not correct"
 
@@ -63,6 +63,6 @@ def test_empty_seq():
   seq2 = ""
   expected_score_matrix = np.array([[0, 0, 0, 0, 0, 0, 0, 0, 0]])
   expected_direction_matrix = np.array([['N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N']])
-  result_score_matrix, result_direction_matrix = hf.matrix_score(seq1, seq2)
+  result_score_matrix, result_direction_matrix = hf.compute_matrix_score(seq1, seq2)
   assert (result_score_matrix == expected_score_matrix).all(), "Score matrix is not correct"
   assert (result_direction_matrix == expected_direction_matrix).all(), "Direction matrix is not correct"
