@@ -1,6 +1,6 @@
 # SmithWaterman
 A pairwise local sequence alignment method, to find the optimal local sequence alignment between two nucleotide sequences, using the Smith-Waterman algorithm. 
-The **SmithWaterman** project is available at [https://github.com/ariannafebbo/smithwaterman]
+The **SmithWaterman** project is available [here](https://github.com/ariannafebbo/smithwaterman).
 
 ## Description
 The outcome of the **SmithWaterman** project is a function which takes as parameters: 
@@ -16,7 +16,7 @@ and returns as result the optimal alignment of the two input sequences and the a
 Once having downloaded the package **SmithWaterman**, type from terminal, inside the folder **SmithWaterman**:
 - `pip install .`
 
-Then import the package in your python script and type:
+To import the package in your python script type:
 - `from smith_watermann import sw`
 
 ### Usage example
@@ -26,9 +26,9 @@ Then import the package in your python script and type:
 
 ## How to run test
 Type from terminal, inside the folder **SmithWaterman**:
-- `pip install pipenv` builds the ad hoc environment;
-- `pipenv shell` install dependencies;
-- `pipenv update` updates the environment;
+- `pip install pipenv` installing pipenv;
+- `pipenv shell` builds the ad hoc environment;
+- `pipenv update` install dependencies;
 - `pytest` run tests.
 
 
