@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     # Needed to silence warnings
-    name='SmithWaterman',
+    name='smith-waterman',
     url='https://github.com/ariannafebbo/smithwaterman',
     author='Arianna Febbo',
     # Needed to actually package something
